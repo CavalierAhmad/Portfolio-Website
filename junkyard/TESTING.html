@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Website Portfolio</title>
+  <style>
+/* FOR ACHIEVEWMENTS 
+.projects {
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.projects ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects li {
+  width: 33.33%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.projects .project {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.projects .project img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.projects .project h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.projects .project p {
+  margin-bottom: 10px;
+}
+
+.projects .project a {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.projects .project a:hover {
+  background-color: #2980b9;
+}
+ END OF ACHIEVWEMENTS*/
+
+/* SPAN
+
+    .left-align {
+  text-align: left;
+}
+
+.right-align {
+  float: right;
+  text-align: right;
+}
+
+END OF SPAN*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="float: left;">Your Name</h1>
+    <nav style="float: right;">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </nav>
+  </header><br><br><br><br><br>
+
+  <main>
+
+    <section class="projects">
+      <h2>My Projects</h2>
+      <ul>
+        <li>
+          <div class="project">
+            <img src="project-image.jpg" alt="Project Image">
+            <h3>Project Title</h3>
+            <p>Description of project</p>
+            <a href="project-link.html">View Project</a>
+          </div>
+        </li>
+        <li>
+          <div class="project">
+            <img src="project-image.jpg" alt="Project Image">
+            <h3>Project Title</h3>
+            <p>Description of project</p>
+            <a href="project-link.html">View Project</a>
+          </div>
+        </li>
+        <li>
+          <div class="project">
+            <img src="project-image.jpg" alt="Project Image">
+            <h3>Project Title</h3>
+            <p>Description of project</p>
+            <a href="project-link.html">View Project</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    
+
+    <p>
+      This text is <span class="left-align">left-aligned</span>
+      and this text is <span class="right-align">right-aligned</span>.
+    </p>
+
+    <section id="hero">
+      <h1>Welcome to my portfolio</h1>
+      <p>My name is [Your Name] and I am a [Your Profession/Title]. This is my portfolio where you can see my latest projects and learn more about me.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="your-photo.jpg" alt="[Your Name]">
+      <p>[Insert a brief paragraph about yourself and your background]</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>My Portfolio</h2>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="project-1.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>[Insert a brief description of Project 1]</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="project-2.jpg" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>[Insert a brief description of Project 2]</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="project-3.jpg" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>[Insert a brief description of Project 3]</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p>Website by: Ahmad Al-Jabbouri</p>
+      <a href="mailto:alja0062@algonquinlive.com">alja0062@algonquinlive.com</a>
+    </div>
+    <div class="footer-right">
+      <p>Follow me:</p>
+      <nav class="social-buttons">
+        <a href="https://www.linkedin.com/in/yourname/">LinkedIn</a>
+        <a href="https://github.com/yourusername">Github</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2023 Ahmad Al-Jabbouri | All rights reserved. </p>
+    </div>
+  </footer>
+  
+</body>
+</html>

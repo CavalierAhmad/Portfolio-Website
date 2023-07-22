@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Curriculum</title>
+    <style>
+      /* CSS styling for the search bar */
+      #search-bar {
+        padding: 10px;
+        width: 300px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      /* CSS styling for the filter and sort areas */
+      #Filter {
+        display: inline-block;
+        margin-left: 10px;
+      }
+      #Sort {
+        display: inline-block;
+        margin-left: 10px;
+      }
+      /* CSS styling for the course list */
+      .course {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .course img {
+        width: 100px;
+        margin-right: 20px;
+      }
+      .course h3 {
+        margin: 0;
+        font-size: 20px;
+      }
+      .course p {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Curriculum</h1>
+    
+    <!-- Search bar -->
+    <input type="text" id="search" onkeyup="searchCourses()" placeholder="Search for a course...">
+    
+    <!-- Filter-->
+    <div id="Filter">
+      <label for="filter">Filter by level:</label>
+      <select id="filter" onchange="filterCourses()">
+        <option value="all">All</option>
+        <option value="1">Level 1</option>
+        <option value="2">Level 2</option>
+        <option value="3">Level 3</option>
+        <option value="4">Level 4</option>
+      </select>
+    </div>
+
+    <!--Sort-->
+    <div id="Sort">
+      <label for="sort">Sort by level:</label>
+      <select name="sort" id="sort" onchange="sortCourses(this.value)">
+        <option value="asc">Lowest to highest</option>
+        <option value="desc">Highest to lowest</option>
+      </select>
+    </div>
+    
+    <!--LIST VER2-->
+    
+    <ul id="courses">
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8101.png" alt="Computer Essentials">
+              <div>
+                <h3 class="course-name">Computer Essentials</h3>
+                <p class="course-level">Level: 1</p>
+                <p>Course Code: CST8101</p>
+                <p>The essentials of computer software, hardware, and laptop management form the foundation for building further technical programming skills.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8116.png" alt="Introduction to Computer Programming">
+              <div>
+                <h3 class="course-name">Introduction to Computer Programming</h3>
+                <p class="course-level">Level: 1</p>
+                <p>Course Code: CST8116</p>
+                <p>Possessing the fundamentals of logic, problem-solving and programming language structure provides a solid foundation for further study in the field</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8215.png" alt="Introduction to Database">
+              <div>
+                <h3 class="course-name">Introduction to Database</h3>
+                <p class="course-level">Level: 1</p>
+                <p>Course Code: CST8215</p>
+                <p>Students learn the fundamentals of relational databases design using Entity Relation Diagrams (ERDs), and use Structured Query Language (SQL) to create, modify and query a database.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst2355.png" alt="Database Systems">
+              <div>
+                <h3 class="course-name">Database Systems</h3>
+                <p class="course-level">Level: 2</p>
+                <p>Course Code: CST2355</p>
+                <p>Students acquire practical experience using market-leading object-relational database management systems like Oracle and MySQL.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8102.png" alt="Operating System Fundamentals">
+              <div>
+                <h3 class="course-name">Operating System Fundamentals</h3>
+                <p class="course-level">Level: 2</p>
+                <p>Course Code: CST8102</p>
+                <p>Students explore the basic concepts and components of Operating Systems (OS), and how they function and interact with hardware and software components.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8284.png" alt="Object Oriented Programming">
+              <div>
+                <h3 class="course-name">Object Oriented Programming</h3>
+                <p class="course-level">Level: 2</p>
+                <p>Course Code: CST8284</p>
+                <p>Students explore object-oriented programming methodology using the Java programming language.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8285.png" alt="Web Programming">
+              <div>
+                <h3 class="course-name">Web Programming</h3>
+                <p class="course-level">Level: 2</p>
+                <p>Course Code: CST8285</p>
+                <p>Students develop basic skills of web programming, website design and implementation.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst2234.png" alt="Systems Analysis and Design">
+              <div>
+                <h3 class="course-name">Systems Analysis and Design</h3>
+                <p class="course-level">Level: 3</p>
+                <p>Course Code: CST2234</p>
+                <p>Guided by industry standard software engineering methodologies, students gain hands-on experience with case studies used to develop systems from inception through elaboration, construction and transition phases.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst2234.png" alt="Mobile Graphical Interface Programming">
+              <div>
+                <h3 class="course-name">Mobile Graphical Interface Programming</h3>
+                <p class="course-level">Level: 3</p>
+                <p>Course Code: CST2335</p>
+                <p>Students learn how to program applications using the latest Android development tools.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8109.png" alt="Network Programming">
+              <div>
+                <h3 class="course-name">Network Programming</h3>
+                <p class="course-level">Level: 3</p>
+                <p>Course Code: CST8109</p>
+                <p>Students explore topics including the basic structure, design and layered communications models, with an emphasis on data communications, TCP/IP protocol suite, socket programming and multi-threading concepts.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8288.png" alt="Object Oriented Programming with Design Patterns">
+              <div>
+                <h3 class="course-name">Object Oriented Programming with Design Patterns</h3>
+                <p class="course-level">Level: 3</p>
+                <p>Course Code: CST8288</p>
+                <p>Students implement best practices of object-oriented program development with software design patterns.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8283.png" alt="Business Programming">
+              <div>
+                  <h3 class="course-name">Business Programming</h3>
+                  <p class="course-level">Level: 3</p>
+                  <p>Course Code: CST8283</p>
+                  <p>Students create COBOL programs in a business environment using structured methodology in the latest visual programming environment.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8276.png" alt="Advanced Database Topics">
+              <div>
+                  <h3 class="course-name">Advanced Database Topics</h3>
+                  <p class="course-level">Level: 4</p>
+                  <p>Course Code: CST8276</p>
+                  <p>Teams and individuals explore advanced database topics including database administration (using Oracle), data governance, globalization, security and advances in database technology.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8277.png" alt="Enterprise Application Programming">
+              <div>
+                  <h3 class="course-name">Enterprise Application Programming</h3>
+                  <p class="course-level">Level: 4</p>
+                  <p>Course Code: CST8277</p>
+                  <p>With a focus on the IT Enterprise, students examine the application enterprise environment using and extending the technologies learned in previous courses.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8333.png" alt="Programming Language Research Project">
+              <div>
+                  <h3 class="course-name">Programming Language Research Project</h3>
+                  <p class="course-level">Level: 4</p>
+                  <p>Course Code: CST8333</p>
+                  <p>Students explore this process of self-study by applying project planning, applied research, testing, and implementation of basic and advanced concepts appropriate to the language or framework under study.</p>
+              </div>
+          </div>
+      </li>
+
+      <li>
+          <div class="course">
+              <img src="./pictures/cst8334.png" alt="Software Development Project">
+              <div>
+                  <h3 class="course-name">Software Development Project</h3>
+                  <p class="course-level">Level: 4</p>
+                  <p>Course Code: CST8334</p>
+                  <p>Following the agile software engineering methodology, teams work with clients to analyze business needs, determine computer system requirements, model system designs, build prototypes, test code and deliver final products.</p>
+              </div>
+          </div>
+      </li>
+
+    </ul>
+
+    <!-- end of list ver2-->
+
+    <!--JAVASCRIPT-->
+
+    <script>
+
+      function searchCourses() {
+        const input = document.getElementById("search").value.toLowerCase();
+        const courses = document.querySelectorAll("#courses .course");
+
+        for (let i = 0; i < courses.length; i++) {
+          const name = courses[i].querySelector(".course-name").textContent.toLowerCase();
+          const code = courses[i].querySelectorAll("p")[1].textContent.toLowerCase();
+          if (name.includes(input) || code.includes(input)) {
+            courses[i].style.display = "block";
+          } else {
+            courses[i].style.display = "none";
+          }
+        }
+      }
+
+      function filterCourses() {
+        const level = document.getElementById("filter").value;
+        const courses = document.querySelectorAll("#courses .course");
+
+        for (let i = 0; i < courses.length; i++) {
+          const courseLevel = parseInt(courses[i].querySelector("p").textContent.split(":")[1]);
+          if (level === "all" || courseLevel === parseInt(level)) {
+            courses[i].style.display = "block";
+          } else {
+            courses[i].style.display = "none";
+          }
+        }
+      }
+
+    function sortCourses(order) {
+        let courses = document.querySelectorAll('#courses .course');
+        let sortedCourses = Array.from(courses).sort(function(a, b) {
+            let aLevel = parseInt(a.querySelector('.course-level').textContent.match(/\d+/)[0]);
+            let bLevel = parseInt(b.querySelector('.course-level').textContent.match(/\d+/)[0]);
+            if (order === 'asc') {
+            return aLevel - bLevel;
+            } else if (order === 'desc') {
+            return bLevel - aLevel;
+            }
+        });
+        let coursesList = document.querySelector('#courses');
+        coursesList.innerHTML = '';
+        sortedCourses.forEach(function(course) {
+            coursesList.appendChild(course);
+        });
+    }
+
+    </script>
+
+    <!--END OF JAVASCRIPT-->
+
+  </body>
+</html>

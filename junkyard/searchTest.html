@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List of Courses</title>
+</head>
+<body>
+	<h1>List of Courses</h1>
+	<input type="text" id="searchInput" placeholder="Search for course...">
+	<ul id="courseList">
+		<li>
+      <img src="Untitled.png" width="100px">
+			<div class="course">
+				<h3 class="course-name">Introduction to Computer Science</h3>
+				<p>Level: 1</p>
+				<p>Course Code: CSC1001</p>
+				<p>Description: An introduction to the fundamental principles of computer science, including algorithms, programming languages, data structures, and software development.</p>
+			</div>
+		</li>
+		<li>
+      <img src="Untitled.png" width="100px">
+			<div class="course">
+				<h3 class="course-name">Data Structures and Algorithms</h3>
+				<p>Level: 2</p>
+				<p>Course Code: CSC2001</p>
+				<p>Description: A study of advanced data structures and algorithms, including trees, graphs, sorting, and searching, with an emphasis on problem solving and computational complexity.</p>
+			</div>
+		</li>
+		<li>
+      <img src="Untitled.png" width="100px">
+			<div class="course">
+				<h3 class="course-name">Software Engineering</h3>
+				<p>Level: 3</p>
+				<p>Course Code: CSC3001</p>
+				<p>Description: An overview of the software development life cycle, including requirements gathering, design, implementation, testing, and maintenance, with an emphasis on teamwork and project management.</p>
+			</div>
+		</li>
+	</ul>
+	<script src="courseSearch.js"></script>
+
+  <!--SCRIPT-->
+
+  <script>
+  
+  const searchInput = document.getElementById('searchInput');
+const courseList = document.getElementById('courseList');
+
+searchInput.addEventListener('keyup', function(event) {
+    const searchTerm = event.target.value.toLowerCase();
+    const courses = courseList.getElementsByTagName('li');
+    
+    for (let i = 0; i < courses.length; i++) {
+        const courseName = courses[i].querySelector('.course-name').textContent.toLowerCase();
+        const courseCode = courses[i].querySelectorAll('p')[1].textContent.toLowerCase();
+        
+        if (courseName.indexOf(searchTerm) > -1 || courseCode.indexOf(searchTerm) > -1) {
+            courses[i].style.display = '';
+        } else {
+            courses[i].style.display = 'none';
+        }
+    }
+});
+
+</script>
+
+  <!--END OF SCRIPT-->
+</body>
+</html>

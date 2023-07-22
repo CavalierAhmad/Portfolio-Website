@@ -1,0 +1,392 @@
+/*
+Name: Ahmad Al-Jabbouri
+Date: 2023-03-06
+Filename: style.css
+The style sheet for index.html, resume.html, and courses.html
+*/
+
+/* HEADER */
+
+  /* Spacing header content */
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    margin-left: 40px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 50px;
+    height: auto;
+  }
+
+  #name {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  /* Style the links inside the pill navigation menu */
+  header nav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+
+  /* Change the color of links on mouse-over */
+  header nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Add a color to the active/current link */
+  header nav a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+
+/* FOOTER */
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: #ADB6C4;
+    padding: 20px;
+  }
+
+  footer .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+  
+  footer .middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 0px;
+  }
+  
+  footer .middleLeft {
+    flex: 1 1 auto;
+  }
+
+  footer p {
+    margin: 0;
+    font-size: 14px;
+    font-family: sans-serif;
+  }
+  
+  footer .middleRight {
+    flex: 1 1 auto;
+    text-align: right;
+  }
+
+  footer .middleRight p {
+    padding-right: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-top: 20px;
+  }
+
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .fa:hover {
+      /*opacity: 0.7;*/
+      transform: scale(1.1);
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-github {
+    background: #171515;
+    color: white;
+  }
+
+/* GENERAL */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #E8EAEE;
+}
+
+/* INDEX */
+
+.indexMain {
+  flex: 1;
+  margin: 0 auto;
+  max-width: 1350px;
+}
+
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px;
+  margin-left: 120px;
+  padding-bottom: 100px;
+}
+
+.portrait {
+  float: left;
+  max-width: 50%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  margin-right: 50px;
+  border-radius: 15px;
+  object-fit: contain; /* Conserves image's aspect ration when image is resized */
+}
+
+.welcomeMessage {
+  flex: 1;
+}
+
+.welcomeMessage h1 {
+  font-size: 60px;
+}
+
+.welcomeMessage p {
+  font-size: 40px;
+}
+
+.aboutme {
+  flex-basis: 100%;
+  max-width: 800px;
+  margin-left: 120px;
+  padding-bottom: 50px;
+}
+
+.aboutme h2 {
+  font-size: 45px;
+}
+
+.aboutme p {
+  font-size: 20px;
+}
+
+/* RESUME */
+
+.resume {
+  flex: 1;
+  margin: 0 auto;
+  max-width: 850px;
+}
+
+#beginning {
+  font-size: 40px;
+  padding-left: 50px;
+  margin-bottom: 40px;
+}
+
+.education-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  }
+
+.education-block a {
+text-align: left;
+}
+
+.date {
+text-align: right;
+font-weight: bold;
+}
+
+.education p {
+  margin-top: 0;
+}
+
+.experienceList p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experienceList ul {
+  margin-bottom: 20px;
+}
+
+.goalsANDobjectives {
+  display: table;
+  border-collapse: collapse;
+  }
+
+.header-row {
+display: table-row;
+font-weight: bold;
+}
+
+.row {
+display: table-row;
+}
+
+.col {
+display: table-cell;
+border: 1px solid black;
+padding: 5px;
+}
+
+figure {
+  display: inline-block;
+  width: 45%;
+  margin: 1.5%;
+  border: 2px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  }
+
+figure:hover {
+border-color: #333;
+}
+
+figure figcaption {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 10px;
+background-color: rgba(0, 0, 0, 0.8);
+color: #fff;
+box-sizing: border-box;
+transition: opacity 0.5s ease-in-out;
+opacity: 0;
+}
+
+figure:hover figcaption {
+opacity: 1;
+}
+
+figure h3 {
+margin: 0;
+font-size: 1.2em;
+}
+
+figure p {
+margin-bottom: 5px;
+font-size: 0.9em;
+}
+
+figure a {
+color: #0f0e0e;
+text-decoration: none;
+font-size: 0.8em;
+font-weight: bold;
+border: 1px solid #0b0a0a;
+padding: 5px;
+transition: background-color 0.5s ease-in-out;
+margin-top: 10px;
+}
+
+figure a:hover {
+background-color: #fff;
+color: #000;
+}
+
+.cell {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px;
+  }
+
+figure {
+margin: 0;
+}
+
+figcaption,
+img {
+display: block;
+width: 100%;
+margin-top: 15px;
+padding: 0;
+}
+
+.achievements {
+  margin-bottom: 100px;
+}
+
+/* COURSES */
+
+  /* CSS styling for the search bar */
+  #search-bar {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+/* CSS styling for the filter and sort areas */
+#Filter {
+  display: inline-block;
+  margin-left: 10px;
+}
+#Sort {
+  display: inline-block;
+  margin-left: 10px;
+}
+/* CSS styling for the course list */
+.course {
+    overflow: auto;
+    display: flex;
+    margin-bottom: 20px;
+
+}
+.course img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.course h3 {
+  margin: 0;
+  font-size: 20px;
+}
+.course p {
+  margin: 0;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.options {
+    margin-left: 60px;
+}

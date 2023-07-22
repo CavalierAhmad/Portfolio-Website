@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Course List</title>
+  </head>
+  <body>
+    <div>
+      <label for="search">Search by name or course code:</label>
+      <input type="text" id="search" onkeyup="searchCourses()" placeholder="Search...">
+    </div>
+    <div>
+      <label for="filter">Filter by level:</label>
+      <select id="filter" onchange="filterCourses()">
+        <option value="all">All</option>
+        <option value="1">Level 1</option>
+        <option value="2">Level 2</option>
+        <option value="3">Level 3</option>
+      </select>
+    </div>
+    <ul id="courses">
+      <li>
+        <div class="course">
+          <img src="./pictures/cst8101.png" alt="Computer Essentials">
+          <div>
+            <h3 class="course-name">Computer Essentials</h3>
+            <p>Level: 1</p>
+            <p>Course Code: CST8101</p>
+            <p>The essentials of computer software, hardware, and laptop management form the foundation for building further technical programming skills.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="course">
+          <img src="./pictures/cst8201.png" alt="Networks Essentials">
+          <div>
+            <h3 class="course-name">Networks Essentials</h3>
+            <p>Level: 2</p>
+            <p>Course Code: CST8201</p>
+            <p>This course explores the basics of network architecture, protocols, and communication in both local and wide area networks.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="course">
+          <img src="./pictures/cst8301.png" alt="Database Essentials">
+          <div>
+            <h3 class="course-name">Database Essentials</h3>
+            <p>Level: 3</p>
+            <p>Course Code: CST8301</p>
+            <p>Introduction to database systems and design, including data modeling, relational databases, SQL, and normalization.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <script>
+      function searchCourses() {
+        const input = document.getElementById("search").value.toLowerCase();
+        const courses = document.querySelectorAll("#courses .course");
+
+        for (let i = 0; i < courses.length; i++) {
+          const name = courses[i].querySelector(".course-name").textContent.toLowerCase();
+          const code = courses[i].querySelectorAll("p")[1].textContent.toLowerCase();
+          if (name.includes(input) || code.includes(input)) {
+            courses[i].style.display = "block";
+          } else {
+            courses[i].style.display = "none";
+          }
+        }
+      }
+
+      function filterCourses() {
+        const level = document.getElementById("filter").value;
+        const courses = document.querySelectorAll("#courses .course");
+
+        for (let i = 0; i < courses.length; i++) {
+          const courseLevel = parseInt(courses[i].querySelector("p").textContent.split(":")[1]);
+          if (level === "all" || courseLevel === parseInt(level)) {
+            courses[i].style.display = "block";
+          } else {
+            courses[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body

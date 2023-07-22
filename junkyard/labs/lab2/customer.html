@@ -1,0 +1,177 @@
+<!--
+Name: Ahmad Al-Jabbouri
+Date: 2023-02-05
+Section: CST 8285 section 304
+Lab: 2
+Filename: customer.html
+The objective of this lab is to get familiar with HTML forms.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Customer Registration</title>
+        <meta charset="UTF-8">
+        <meta name=" author " content=" Ahmad Al-Jabbouri " >
+        <meta name=" description " content="The objective of this lab is to get familiar with HTML forms." >
+        <meta name=" keywords " content="form,lab 2" >
+    </head>
+
+    <body>
+        <h1>Customer Registration</h1>
+
+        <fieldset>
+            <legend>1. User Info</legend>
+
+            <table>
+                <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td><label for="lname">Last Name</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="fname" name="fname" maxlength="10"></td>
+                    <td><input type="text" id="lname" name="lname" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="email">Email</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="email" id="email" name="email" placeholder="format for email is xxx@yyy.zzz" size="46"></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">Password</label></td>
+                    <td><label for="pwdR">Password Repeat</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="pwd" name="pwd" placeholder="at least 8 characters"></td>
+                    <td><input type="password" id="pwdR" name="pwdR" placeholder="at least 8 characters"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Location</legend>
+
+            <table>
+                <tr>
+                    <td colspan="3"><label for="address">Address</label></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="address" name="address" size="46"></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td><label for="state">State</label></td>
+                    <td><label for="zip">Zip</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="city" name="city" size="20"></td>
+                    <td><input type="text" id="state" name="state" size="8"></td>
+                    <td><input type="text" id="zip" name="zip" size="6"></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone</label></td>
+                    <td colspan="2"><label for="country">Country</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="phone" name="phone" placeholder="NNN-NNN-NNNN"></td>
+                    <td colspan="2">
+                        <select name="country" id= "country">
+                            <option value ="canada" selected >Canada</option>
+                            <option value ="usa">United States</option>
+                            <option value ="mexico">Mexico</option>
+                            <option value ="brazil">Brazil</option>
+                            <option value ="peru">Peru</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">Continent</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type ="radio" id= "namerica" name="continent" value="namerica">
+                        <label for="namerica">North America</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type ="radio" id= "europe" name="continent" value="europe">
+                        <label for="europe">Europe</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input type ="radio" id= "samerica" name="continent" value="samerica">
+                        <label for="samerica">South America</label>
+                    </td>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>3.personal Details </legend>
+
+            <table>
+                <tr>
+                    <td><label for ="bd">Birth Day</label></td>
+                    <td><label for ="fcolor">Favorite Color</label></td>
+                </tr>
+                <tr>
+                    <td><input type="date" id="bd" name="bd" size ="5"></td>
+                    <td><input type="color" id= "fcolor" name="fcolor" size="3"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Interest In Art</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Minimal <input type="range" id= "range" name="color"> Love it!
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        
+        <h2>4.All Done</h2>
+
+        <input type ="checkbox" id="checkbox" name="checkbox" value="checkbox"> 
+        I agree to the
+        <a href = "text"><u>Terms of the site</u></a><br>
+        <table>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+            <tr>
+                <td>2023 Copyright</td>
+            </tr>
+        </table>
+
+        <footer>
+            <p> Author: Ahmad Al-Jabbouri<br>
+            <a href="mailto:alja0062@algonquinlive.com">alja0062@algonquinlive.com</a></p>
+        </footer>
+    </body>
+</html>
+
+<!-- COMMANDS
+
+Body items:
+    New line: <br>
+    Paragraph: <p>
+	Unordered list: <ul> (type="square" for squares)
+	Ordered list: <ol> (type="a" for letters)
+	List item: <i>
+    Footer: <footer>
+
+To insert image:
+	<img src="file.txt" alt="text" width="X" height="Y">
+
+Text format:
+    Bold: <b>
+    Italics: <i>
+
+Hyperlinks:
+	Mail: <a href = "mailto:alja0062@algonquinlive.com">email</a>
+-->
